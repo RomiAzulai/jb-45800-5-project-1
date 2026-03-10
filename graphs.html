@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Management</title>
+    <script defer src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Graphs</h1>
+    <nav id="menu">
+    </nav>
+
+    <div class="graphs-container">
+        <div class="export-buttons">
+            <button onclick="exportToCSV()" class="submit-btn">Download CSV</button>
+            <button onclick="exportToPDF()" class="submit-btn">Download PDF</button>
+        </div>
+
+        <div class="chart-section">
+            <h2>Expenses by Category</h2>
+            <canvas id="categoryChart"></canvas>
+        </div>
+
+        <div class="chart-section">
+            <h2>Expenses by Month</h2>
+            <canvas id="monthChart"></canvas>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Management</title>
+     <script defer src="app.js"></script>
+     <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <h1>Filters</h1>
+    <nav id="menu">
+    </nav>
+
+    <div class="filter-container">
+        <h2>Filter Expenses by Date</h2>
+        
+        <div class="filter-section">
+            <h3>Filter by Year</h3>
+            <select id="yearFilter">
+                <option value="">-- Select Year --</option>
+            </select>
+            <button onclick="filterByYear()" class="submit-btn">Apply</button>
+        </div>
+
+        <div class="filter-section">
+            <h3>Filter by Year and Month</h3>
+            <select id="yearFilterMonth">
+                <option value="">-- Select Year --</option>
+            </select>
+            <select id="monthFilter">
+                <option value="">-- Select Month --</option>
+            </select>
+            <button onclick="filterByYearMonth()" class="submit-btn">Apply</button>
+        </div>
+
+        <div class="filter-section">
+            <h3>Filter by Specific Date</h3>
+            <select id="yearFilterDay">
+                <option value="">-- Select Year --</option>
+            </select>
+            <select id="monthFilterDay">
+                <option value="">-- Select Month --</option>
+            </select>
+            <select id="dayFilter">
+                <option value="">-- Select Day --</option>
+            </select>
+            <button onclick="filterByDate()" class="submit-btn">Apply</button>
+        </div>
+
+        <div class="filter-section">
+            <h3>Filter by Maximum Amount</h3>
+            <input type="number" id="maxAmount" placeholder="Enter maximum amount" min="0" step="0.01">
+            <button onclick="filterByMaxAmount()" class="submit-btn">Apply</button>
+        </div>
+    </div>
+
+    <div class="results-container">
+        <div id="noResults" class="hidden">
+            <p>No expenses match your filter criteria.</p>
+        </div>
+        <table id="filteredTable" class="hidden">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody id="filteredBody">
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
